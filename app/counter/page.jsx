@@ -1,17 +1,16 @@
 "use client"
-import React from 'react'
+import React, { useState } from 'react'
 
 function counterPage() {
-    let number = 0
-    number +=5
-
+    // change number from variable to state
+    // That will let nextjs update the v-DOM upon the state changes
+    const [number, setNumber] = useState(0)
     
-
   return (
       <div>
           
           <h1>{number}</h1>
-          <button className='w-50 h-30 rounded bg-pink-300' onClick={() => number += 1}>click</button>
+          <button className='w-50 h-30 rounded bg-pink-300' onClick={() => setNumber(number +1)}>click</button>
         
       
       </div>
